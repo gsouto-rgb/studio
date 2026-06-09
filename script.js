@@ -121,7 +121,7 @@ if (canvas) {
             );
 
             ctx.fillStyle =
-            "rgba(255,255,255,0.35)";
+            "#e84a77";
 
             ctx.fill();
         }
