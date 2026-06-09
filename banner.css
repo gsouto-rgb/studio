@@ -1,0 +1,220 @@
+/* ================================================= */
+/* RESET HTML5 */
+/* ================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+/* ================================================= */
+/* CRIATIVO */
+/* ================================================= */
+
+.creative-container {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #fff;
+}
+
+/* ================================================= */
+/* ELEMENTOS */
+/* ================================================= */
+
+.logo,
+.copy,
+.prod,
+.cta {
+  position: absolute;
+
+  inset: 0;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  will-change: transform, opacity;
+}
+
+/* ================================================= */
+/* Z-INDEX */
+/* ================================================= */
+
+.prod {
+  z-index: 1;
+}
+
+.copy {
+  z-index: 2;
+}
+
+.logo {
+  z-index: 3;
+}
+
+.cta {
+  z-index: 4;
+}
+
+/* ================================================= */
+/* ANIMAÇÃO */
+/* ================================================= */
+
+.prod {
+  opacity: 0;
+
+  animation:
+    fadeProd .7s ease-out forwards,
+    prodPulse 7s ease-in-out infinite;
+
+  animation-delay:
+    .2s,
+    1.2s;
+}
+
+.copy {
+  opacity: 0;
+
+  animation:
+    fadeCopy .7s ease-out forwards;
+
+  animation-delay: .5s;
+}
+
+.logo {
+  opacity: 0;
+
+  animation:
+    fadeLogo .7s ease-out forwards;
+
+  animation-delay: .8s;
+}
+
+.cta {
+  opacity: 0;
+
+  animation:
+    fadeCTA .7s ease-out forwards,
+    pulseCTA 5s ease-in-out infinite;
+
+  animation-delay:
+    1.1s,
+    2s;
+}
+
+/* ================================================= */
+/* KEYFRAMES */
+/* ================================================= */
+
+@keyframes fadeProd {
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes prodPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeCopy {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLogo {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeCTA {
+  from {
+    opacity: 0;
+    transform: scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseCTA {
+  0% {
+    transform: scale(1);
+  }
+
+  8% {
+    transform: scale(1.02);
+  }
+
+  16% {
+    transform: scale(1);
+  }
+
+  24% {
+    transform: scale(1.01);
+  }
+
+  32% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* ================================================= */
+/* CLICK AREA */
+/* ================================================= */
+
+#click-area {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+}
