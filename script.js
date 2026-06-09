@@ -177,7 +177,7 @@ if (canvas) {
                     );
 
                     ctx.strokeStyle =
-                    `rgba(255,255,255,${
+                    `rgba(232,74,119,${
                         ((150 - distance) / 150) * 0.15
                     })`;
 
